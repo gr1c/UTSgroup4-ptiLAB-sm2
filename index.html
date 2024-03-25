@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylemny.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="image-container">
+            <img id="login-image-1" class="login-image" src="loginbg.jpg">
+            <img id="login-image-2" class="login-image hidden" src="black.jpg">
+        </div>
+        <h2>Money Tracker
+            <form id="login-form">
+                <div class="input-box">
+                    <input type="text" placeholder="Input Your Name" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <center>
+                    <button type="submit" value="submit" class="bn632-hover bn26">Start</button>
+                </center>
+            </form>
+        </h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var images = ['loginbg.jpg', 'black.jpg']; // Daftar gambar yang akan digunakan
+            var currentIndex = 0;
+
+            // Mengatur interval untuk mengganti gambar setiap 3 detik (3000 milidetik)
+            setInterval(function() {
+                currentIndex = (currentIndex + 1) % images.length;
+                $('.login-image').toggleClass('hidden');
+                setTimeout(function() {
+                    $('#login-image-1').attr('src', images[currentIndex]);
+                }, 300);
+            }, 3000);
+
+            $('#login-form').submit(function(event){
+                event.preventDefault();
+                var username = $('input[type="text"]').val(); 
+                localStorage.setItem('username', username); 
+                window.location.href = 'main.html';
+            });
+        });
+    </script>
+</body>
+</html>

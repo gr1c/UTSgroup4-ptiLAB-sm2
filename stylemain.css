@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('blue.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body {
+    font-family: Heletivica, sans-serif;
+}
+
+.outer {
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.inline {
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.container {
+    color: white;
+}
+
+.halo {
+    display: flex;
+}
+
+.saldo {
+    margin: 8px;
+    background-color: #474F7A;
+    width: 420px;
+    height: 100px;
+    padding-top: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: 2px solid rgba(0, 0, 0, 0.4);
+    font-family: Heletivica, sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Depth effect */
+}
+
+.transaksi {
+    background-color: #363062;
+    padding: 8px;
+    border-radius: 10px;
+    width: 680px;
+    margin-left: 30px;
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    outline: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Depth effect */
+}
+
+.clock {
+    margin-left: 200px;
+}
+
+.bar {
+    background-color: #3887BE;
+    margin-top: 5px;
+    padding-top: 15px;
+    font-family: Heletivica, sans-serif;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    outline: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Depth effect */
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid lightgray;
+    color: lightgrey;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: 70px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hello-text {
+    animation: bounce 1s infinite;
+}
